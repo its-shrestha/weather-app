@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 75%;
+}
+
+body {
+    padding: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#search-box {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+input, button {
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+}
+
+input {
+    width: 100%;
+}
+
+.lil-boxie {
+    border: 0.2rem rgb(7, 0, 27) solid;
+    border-radius: 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+#extra-info {
+    display: flex;
+
+}
+
+.row {
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width: 989px) {
+    #extra-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+}
