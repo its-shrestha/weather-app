@@ -38,6 +38,17 @@ function updateUI(text) {
         document.getElementById("search-btn").classList.add(`box-${text}`);
     }
 
+    else if(text==="Blizzard"||text==="Heavy freezing drizzle"||text==="Torrential rain shower") {
+        document.getElementById("body").classList.add("bg-hazard");
+
+        const elements = document.querySelectorAll(".lil-boxie"); 
+        elements.forEach(element => {
+            element.classList.add("box-hazard"); 
+        });
+        document.getElementById("search-btn").classList.add("box-hazard");
+
+    }
+
     else if(text.includes("rain")||text.includes("drizzle")) {
         document.getElementById("body").classList.add("bg-rain");
 
