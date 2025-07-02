@@ -1,0 +1,37 @@
+.bg-mist {
+    background-image: url("https://i.pinimg.com/736x/1f/3b/aa/1f3baa09efafee5b983d58aac82a012f.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-mist {
+      background: linear-gradient(180deg, rgba(200, 200, 200, 0.2), rgba(255, 255, 255, 0.1));
+
+}
+
+.bg-cloudy {
+    background-image: url("https://i.pinimg.com/736x/16/a8/59/16a8596546f510d150b1f5fd31bbd52b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-cloudy {
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.3), rgba(120, 120, 120, 0.2));
+}
+
+.bg-Sunny {
+    background-image: url("https://i.pinimg.com/736x/1f/aa/11/1faa1174d1285c25414c2d0b6e485105.jpg")
+}
+
+.box-Sunny {
+    background: linear-gradient(180deg, rgba(255, 223, 100, 0.4), rgba(255, 255, 255, 0.1));
+}
+
+.bg-Clear {
+    background-image: url("https://i.pinimg.com/736x/85/79/23/85792329a89a409d2cc8d721b1256025.jpg");
+}
+
+.box-Clear {
+    background: linear-gradient(180deg, rgba(20, 24, 60, 0.6), rgba(10, 10, 30, 0.3));
+}
+
