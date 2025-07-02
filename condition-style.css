@@ -50,3 +50,11 @@
 .box-snow {
     background: linear-gradient(180deg, rgba(220, 240, 255, 0.4), rgba(180, 220, 255, 0.2));
 }
+
+.bg-thunder {
+    background-image: url("https://i.pinimg.com/736x/29/1b/87/291b87b65771f1908936c104263c5592.jpg")
+}
+
+.box-thunder {
+    background: linear-gradient(180deg, rgba(80, 80, 110, 0.4), rgba(30, 30, 50, 0.3));
+}
