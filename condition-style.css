@@ -58,3 +58,11 @@
 .box-thunder {
     background: linear-gradient(180deg, rgba(80, 80, 110, 0.4), rgba(30, 30, 50, 0.3));
 }
+
+.bg-hazard {
+    background: url("https://i.pinimg.com/736x/27/d0/2f/27d02f55183fe1576d0fdfa5b2e03ec7.jpg")
+}
+
+.box-hazard {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.35), rgba(120, 0, 0, 0.25));
+}
