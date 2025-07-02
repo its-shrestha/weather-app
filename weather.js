@@ -48,6 +48,16 @@ function updateUI(text) {
         document.getElementById("search-btn").classList.add("box-rain");
     }
 
+    else if(text.includes("snow with thunder")||text.includes("Thundery")) {
+        document.getElementById("body").classList.add("bg-thunder");
+
+        const elements = document.querySelectorAll(".lil-boxie"); 
+        elements.forEach(element => {
+            element.classList.add("box-thunder"); 
+        });
+        document.getElementById("search-btn").classList.add("box-thunder");
+    }
+
     else if(text.includes("snow")||text.includes("pellets")||text.includes("sleet")||text.includes("blizzard")) {
         document.getElementById("body").classList.add("bg-snow");
 
@@ -58,8 +68,6 @@ function updateUI(text) {
         document.getElementById("search-btn").classList.add("box-snow");
     
     }
-
-    
 }
 
 function updateHTML(data) {
