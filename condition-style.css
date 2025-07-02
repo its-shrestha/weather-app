@@ -35,3 +35,18 @@
     background: linear-gradient(180deg, rgba(20, 24, 60, 0.6), rgba(10, 10, 30, 0.3));
 }
 
+.bg-rain {
+    background-image: url("https://i.pinimg.com/736x/76/20/d0/7620d055891b43ee005337daffcaa75e.jpg");
+}
+
+.box-rain {
+    background: linear-gradient(180deg, rgba(90, 130, 180, 0.35), rgba(40, 60, 90, 0.25));
+}
+
+.bg-snow {
+    background-image: url("https://i.pinimg.com/736x/7b/0e/4f/7b0e4f9247e93db3361d0794e4415879.jpg");
+}
+
+.box-snow {
+    background: linear-gradient(180deg, rgba(220, 240, 255, 0.4), rgba(180, 220, 255, 0.2));
+}
