@@ -8,78 +8,84 @@ function getWeatherData(url) {
 }
 
 function updateUI(text) {
-    if(text==="Mist"||text==="Fog"||text==="Freezing Fog") {
-        document.getElementById("body").classList.add("bg-mist");
+    const condition = text.toLowerCase(); // normalize everything
 
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-mist"); 
-        });
-        document.getElementById("search-btn").classList.add("box-mist");
+    // Remove previous classes
+    const body = document.getElementById("body");
+    const boxes = document.querySelectorAll(".lil-boxie");
+    const btn = document.getElementById("search-btn");
+
+    const bgClasses = ["bg-mist", "bg-cloudy", "bg-snow", "bg-rain", "bg-clear", "bg-sunny", "bg-hazard", "bg-thunder"];
+    const boxClasses = ["box-mist", "box-cloudy", "box-snow", "box-rain", "box-clear", "box-sunny", "box-hazard", "box-thunder"];
+
+    bgClasses.forEach(cls => body.classList.remove(cls));
+    boxClasses.forEach(cls => {
+        boxes.forEach(el => el.classList.remove(cls));
+        btn.classList.remove(cls);
+    });
+
+    // Start matching
+    if (["mist", "fog", "freezing fog"].includes(condition)) {
+        body.classList.add("bg-mist");
+        boxes.forEach(el => el.classList.add("box-mist"));
+        btn.classList.add("box-mist");
     }
 
-    else if(text==="Partly cloudy"||text==="Cloudy"||text==="Overcast") {
-        document.getElementById("body").classList.add("bg-cloudy");
-
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-cloudy"); 
-        });
-        document.getElementById("search-btn").classList.add("box-cloudy");
+    else if (["partly cloudy", "cloudy", "overcast"].includes(condition)) {
+        body.classList.add("bg-cloudy");
+        boxes.forEach(el => el.classList.add("box-cloudy"));
+        btn.classList.add("box-cloudy");
     }
 
-    else if(text==="Sunny"||text==="Clear") {
-        document.getElementById("body").classList.add(`bg-${text}`);
-
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add(`box-${text}`); 
-        });
-        document.getElementById("search-btn").classList.add(`box-${text}`);
+    else if (condition === "sunny") {
+        body.classList.add("bg-sunny");
+        boxes.forEach(el => el.classList.add("box-sunny"));
+        btn.classList.add("box-sunny");
     }
 
-    else if(text==="Blizzard"||text==="Heavy freezing drizzle"||text==="Torrential rain shower") {
-        document.getElementById("body").classList.add("bg-hazard");
-
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-hazard"); 
-        });
-        document.getElementById("search-btn").classList.add("box-hazard");
-
+    else if (condition === "clear") {
+        body.classList.add("bg-clear");
+        boxes.forEach(el => el.classList.add("box-clear"));
+        btn.classList.add("box-clear");
     }
 
-    else if(text.includes("rain")||text.includes("drizzle")) {
-        document.getElementById("body").classList.add("bg-rain");
-
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-rain"); 
-        });
-        document.getElementById("search-btn").classList.add("box-rain");
+    else if (condition.includes("thunder")) {
+        body.classList.add("bg-thunder");
+        boxes.forEach(el => el.classList.add("box-thunder"));
+        btn.classList.add("box-thunder");
     }
 
-    else if(text.includes("snow with thunder")||text.includes("Thundery")) {
-        document.getElementById("body").classList.add("bg-thunder");
-
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-thunder"); 
-        });
-        document.getElementById("search-btn").classList.add("box-thunder");
+    else if (
+        condition.includes("snow") ||
+        condition.includes("pellets") ||
+        condition.includes("sleet") ||
+        condition.includes("blizzard")
+    ) {
+        body.classList.add("bg-snow");
+        boxes.forEach(el => el.classList.add("box-snow"));
+        btn.classList.add("box-snow");
     }
 
-    else if(text.includes("snow")||text.includes("pellets")||text.includes("sleet")||text.includes("blizzard")) {
-        document.getElementById("body").classList.add("bg-snow");
+    else if (
+        condition.includes("blizzard") ||
+        condition.includes("freezing drizzle") ||
+        condition.includes("torrential rain")
+    ) {
+        body.classList.add("bg-hazard");
+        boxes.forEach(el => el.classList.add("box-hazard"));
+        btn.classList.add("box-hazard");
+    }
 
-        const elements = document.querySelectorAll(".lil-boxie"); 
-        elements.forEach(element => {
-            element.classList.add("box-snow"); 
-        });
-        document.getElementById("search-btn").classList.add("box-snow");
-    
+    else if (
+        condition.includes("rain") ||
+        condition.includes("drizzle")
+    ) {
+        body.classList.add("bg-rain");
+        boxes.forEach(el => el.classList.add("box-rain"));
+        btn.classList.add("box-rain");
     }
 }
+
 
 function updateHTML(data) {
     document.getElementById("city-name").innerHTML = `<h1><i class="fa fa-map-marker" style="font-size:36px"></i>   
