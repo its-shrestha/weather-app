@@ -19,24 +19,30 @@
     background: linear-gradient(180deg, rgba(180, 180, 180, 0.3), rgba(120, 120, 120, 0.2));
 }
 
-.bg-Sunny {
-    background-image: url("https://i.pinimg.com/736x/1f/aa/11/1faa1174d1285c25414c2d0b6e485105.jpg")
+.bg-sunny {
+    background-image: url("https://i.pinimg.com/736x/1f/aa/11/1faa1174d1285c25414c2d0b6e485105.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.box-Sunny {
+.box-sunny {
     background: linear-gradient(180deg, rgba(255, 223, 100, 0.4), rgba(255, 255, 255, 0.1));
 }
 
-.bg-Clear {
+.bg-clear {
     background-image: url("https://i.pinimg.com/736x/85/79/23/85792329a89a409d2cc8d721b1256025.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.box-Clear {
+.box-clear {
     background: linear-gradient(180deg, rgba(20, 24, 60, 0.6), rgba(10, 10, 30, 0.3));
 }
 
 .bg-rain {
-    background-image: url("https://i.pinimg.com/736x/76/20/d0/7620d055891b43ee005337daffcaa75e.jpg");
+    background-image: url("https://i.pinimg.com/736x/3c/b8/f3/3cb8f353670b1f587fda83b7c650d4c3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-rain {
@@ -45,6 +51,8 @@
 
 .bg-snow {
     background-image: url("https://i.pinimg.com/736x/7b/0e/4f/7b0e4f9247e93db3361d0794e4415879.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-snow {
@@ -52,7 +60,9 @@
 }
 
 .bg-thunder {
-    background-image: url("https://i.pinimg.com/736x/29/1b/87/291b87b65771f1908936c104263c5592.jpg")
+    background-image: url("https://i.pinimg.com/736x/29/1b/87/291b87b65771f1908936c104263c5592.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-thunder {
@@ -60,7 +70,9 @@
 }
 
 .bg-hazard {
-    background: url("https://i.pinimg.com/736x/27/d0/2f/27d02f55183fe1576d0fdfa5b2e03ec7.jpg")
+    background: url("https://i.pinimg.com/736x/27/d0/2f/27d02f55183fe1576d0fdfa5b2e03ec7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-hazard {
