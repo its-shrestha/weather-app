@@ -1,15 +1,48 @@
 const url = "http://api.weatherapi.com/v1/current.json?key=f6e5b4ab7771402b8f5144815250402&q=new-delhi";
 
 function getWeatherData(url) {
-    fetch(url).then(res => res.json()).then(data => updateHTML(data)).catch(err => {
+    fetch(url).then(res => res.json()).then(data => {updateHTML(data); updateUI(data.current.condition.text);}).
+    catch(err => {
     console.error("Fetch failed:", err);
-    alert("Enter a valid city.");
-  });    
+    alert("Fetch failed.");});    
+}
+
+function updateUI(text) {
+    if(text==="Mist"||text==="Fog"||text==="Freezing Fog") {
+        document.getElementById("body").classList.add("bg-mist");
+
+        const elements = document.querySelectorAll(".lil-boxie"); 
+        elements.forEach(element => {
+            element.classList.add("box-mist"); 
+        });
+        document.getElementById("search-btn").classList.add("box-mist");
+    }
+
+    else if(text==="Partly cloudy"||text==="Cloudy"||text==="Overcast") {
+        document.getElementById("body").classList.add("bg-cloudy");
+
+        const elements = document.querySelectorAll(".lil-boxie"); 
+        elements.forEach(element => {
+            element.classList.add("box-cloudy"); 
+        });
+        document.getElementById("search-btn").classList.add("box-cloudy");
+    }
+
+    else if(text==="Sunny"||text==="Clear") {
+        document.getElementById("body").classList.add(`bg-${text}`);
+
+        const elements = document.querySelectorAll(".lil-boxie"); 
+        elements.forEach(element => {
+            element.classList.add(`box-${text}`); 
+        });
+        document.getElementById("search-btn").classList.add(`box-${text}`);
+    }
 }
 
 function updateHTML(data) {
     document.getElementById("city-name").innerHTML = `<h1><i class="fa fa-map-marker" style="font-size:36px"></i>   
 ${data.location.name}, ${data.location.country}</h1>`;
+
     document.getElementById("last-updated").innerHTML = `<h1>Last Updated: ${data.current.last_updated}</h1>`;
 
     document.getElementById("condition").innerHTML = `

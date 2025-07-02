@@ -9,6 +9,7 @@ html {
 body {
     padding: 2rem;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
 #search-box {
@@ -47,6 +48,14 @@ input {
 .row {
     padding: 0.5rem;
 }
+
+.alegreya-sc-extrabold {
+  font-family: "Alegreya SC", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 
 @media only screen and (max-width: 989px) {
     #extra-info {
