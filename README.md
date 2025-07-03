@@ -1,1 +1,3 @@
 This is a simple project that combines the basics of front end development to deploy an app that can help keep track of live weather details in your city. Powered by WeatherAPI, this project uses HTML, CSS, JS, along with frameworks such as Bootstrap, to bring its users live updates of weather data, along with an ambient, creative user-interface which changes along with the changes in weather report, reflecting the said condition in the interface.
+
+Image used purely for non-commercial, aesthetic purposes. All rights belong to original creators.
